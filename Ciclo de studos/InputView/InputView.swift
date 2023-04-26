@@ -14,6 +14,11 @@ struct InputView: View {
     var body: some View {
         NavigationView {
             VStack{
+                
+                
+                
+                
+                
                 Text("Vamos organizar seus estudos")
                     .font(.title2)
                     .padding(.top)
