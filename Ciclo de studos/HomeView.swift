@@ -11,21 +11,25 @@ struct HomeView: View {
     var body: some View {
        
        TabView {
-//          VStack{
+          VStack{
              Text("um")
-//             NavigationLink("study Cicle View", value:Screen.studyCicle)
-//          }
+             NavigationLink("study Cicle View", value:Screen.studyCicle)
+          }
           .tabItem {
              Image(systemName: "clock.fill")
-             Text("dois")
           }
-//          VStack{
+         Text("dois")
+          .tabItem {
+            Image(systemName: "clock.fill")
+            Text("dois")
+          }
+          VStack{
              Text("tres")
-//             NavigationLink("Home", value:Screen.home)
-//          }
-//          .tabItem {
-//             Image(systemName: "clock.fill")
-//          }
+             NavigationLink("Home", value:Screen.home)
+          }
+          .tabItem {
+             Image(systemName: "clock.fill")
+          }
        }
     }
 }

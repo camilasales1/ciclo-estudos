@@ -7,31 +7,28 @@
 
 import SwiftUI
 
-struct InputView: View {
+
+
+
+struct TestDateView: View {
     
-    @State private var date = Date()
+  @ObservedObject var inputViewModel = InputViewModel()
     
     var body: some View {
-        NavigationView {
+      
+       
             VStack{
                 
-                
-                
-                
-                
-                Text("Vamos organizar seus estudos")
-                    .font(.title2)
-                    .padding(.top)
-                Spacer()
+            
                 VStack {
                     Text("Data da prova")
                     DatePicker(
-                        "", selection: $date, in: date...,  displayedComponents: [.date]
+                      "", selection: $inputViewModel.testDate, in: inputViewModel.testDate...,  displayedComponents: [.date]
                     ).datePickerStyle(.wheel).labelsHidden()
                 }
                 Spacer()
                 VStack {
-                    NavigationLink(destination: HomeView()) {
+                  NavigationLink(value:Screen.daily) {
                         Text("Próximo")
                             .background(Color.primary)
                             .foregroundColor(Color.white) //change to theme color
@@ -39,13 +36,15 @@ struct InputView: View {
                     PageIndicator(numPages: 5, currentPage: .constant(0))
                 }
             }
+            .navigationBarTitle("Vamos organizar seus estudos", displayMode: .inline)
             .padding()
-        }
     }
 }
 
-struct InputView_Previews: PreviewProvider {
+struct TestDateView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView()
+      NavigationStack {
+        TestDateView()
+      }
     }
 }

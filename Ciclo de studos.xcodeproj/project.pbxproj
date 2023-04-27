@@ -12,7 +12,7 @@
 		683C479B29F2CCDE00AC93E7 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C479A29F2CCDE00AC93E7 /* DummyData.swift */; };
 		683C479E29F2CFDA00AC93E7 /* ReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C479D29F2CFDA00AC93E7 /* ReportViewModel.swift */; };
 		683C47A029F2D03800AC93E7 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C479F29F2D03800AC93E7 /* ReportView.swift */; };
-		683C47A329F2D08B00AC93E7 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C47A229F2D08B00AC93E7 /* InputView.swift */; };
+		683C47A329F2D08B00AC93E7 /* StudyStartDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C47A229F2D08B00AC93E7 /* StudyStartDateView.swift */; };
 		683C47A529F2D0AF00AC93E7 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C47A429F2D0AF00AC93E7 /* InputViewModel.swift */; };
 		683C47A729F2D10700AC93E7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C47A629F2D10700AC93E7 /* DetailViewModel.swift */; };
 		683C47A929F2D11A00AC93E7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C47A829F2D11A00AC93E7 /* DetailView.swift */; };
@@ -23,6 +23,12 @@
 		687D1D4629F0C09500A18DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687D1D4529F0C09500A18DBD /* Assets.xcassets */; };
 		687D1D4929F0C09500A18DBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687D1D4829F0C09500A18DBD /* Preview Assets.xcassets */; };
 		687D1D5229F0C13600A18DBD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D1D5129F0C13600A18DBD /* Model.swift */; };
+		68BD3F2429F882B500D054C1 /* SubjectResgistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD3F2329F882B500D054C1 /* SubjectResgistrationView.swift */; };
+		68BD3F2629F8848300D054C1 /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD3F2529F8848300D054C1 /* NavigationModel.swift */; };
+		68BD3F2829F889DF00D054C1 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD3F2729F889DF00D054C1 /* DataBase.swift */; };
+		68BD3F2A29F88AAA00D054C1 /* SubjectsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD3F2929F88AAA00D054C1 /* SubjectsListView.swift */; };
+		68BD3F2C29F8A2B900D054C1 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD3F2B29F8A2B900D054C1 /* IntroView.swift */; };
+		68BD3F2E29F8A5F100D054C1 /* DailyStudyTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD3F2D29F8A5F100D054C1 /* DailyStudyTimeView.swift */; };
 		C18C87AC29F75A91002D2129 /* DotIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18C87AB29F75A91002D2129 /* DotIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +38,7 @@
 		683C479A29F2CCDE00AC93E7 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		683C479D29F2CFDA00AC93E7 /* ReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModel.swift; sourceTree = "<group>"; };
 		683C479F29F2D03800AC93E7 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
-		683C47A229F2D08B00AC93E7 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		683C47A229F2D08B00AC93E7 /* StudyStartDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyStartDateView.swift; sourceTree = "<group>"; };
 		683C47A429F2D0AF00AC93E7 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 		683C47A629F2D10700AC93E7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		683C47A829F2D11A00AC93E7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -44,6 +50,12 @@
 		687D1D4529F0C09500A18DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687D1D4829F0C09500A18DBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		687D1D5129F0C13600A18DBD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		68BD3F2329F882B500D054C1 /* SubjectResgistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectResgistrationView.swift; sourceTree = "<group>"; };
+		68BD3F2529F8848300D054C1 /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		68BD3F2729F889DF00D054C1 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		68BD3F2929F88AAA00D054C1 /* SubjectsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsListView.swift; sourceTree = "<group>"; };
+		68BD3F2B29F8A2B900D054C1 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		68BD3F2D29F8A5F100D054C1 /* DailyStudyTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStudyTimeView.swift; sourceTree = "<group>"; };
 		C18C87AB29F75A91002D2129 /* DotIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +89,9 @@
 		683C479729F2CC9600AC93E7 /* Shared Data */ = {
 			isa = PBXGroup;
 			children = (
+				683C479829F2CCC300AC93E7 /* Shared.swift */,
+				68BD3F2529F8848300D054C1 /* NavigationModel.swift */,
+				68BD3F2729F889DF00D054C1 /* DataBase.swift */,
 			);
 			path = "Shared Data";
 			sourceTree = "<group>";
@@ -93,9 +108,13 @@
 		683C47A129F2D04300AC93E7 /* InputView */ = {
 			isa = PBXGroup;
 			children = (
-				683C47A229F2D08B00AC93E7 /* InputView.swift */,
 				683C47A429F2D0AF00AC93E7 /* InputViewModel.swift */,
+				68BD3F2B29F8A2B900D054C1 /* IntroView.swift */,
+				683C47A229F2D08B00AC93E7 /* StudyStartDateView.swift */,
+				68BD3F2D29F8A5F100D054C1 /* DailyStudyTimeView.swift */,
+				68BD3F2929F88AAA00D054C1 /* SubjectsListView.swift */,
 				C18C87AB29F75A91002D2129 /* DotIndicatorView.swift */,
+				68BD3F2329F882B500D054C1 /* SubjectResgistrationView.swift */,
 			);
 			path = InputView;
 			sourceTree = "<group>";
@@ -103,6 +122,8 @@
 		683C47AA29F2D14600AC93E7 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				683C47A629F2D10700AC93E7 /* DetailViewModel.swift */,
+				683C47A829F2D11A00AC93E7 /* DetailView.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -121,7 +142,6 @@
 			children = (
 				687D1D4129F0C09300A18DBD /* Ciclo_de_studosApp.swift */,
 				683C479A29F2CCDE00AC93E7 /* DummyData.swift */,
-				683C479829F2CCC300AC93E7 /* Shared.swift */,
 				683C479729F2CC9600AC93E7 /* Shared Data */,
 			);
 			path = Shared;
@@ -155,8 +175,6 @@
 				683C479C29F2CFB400AC93E7 /* ReportView */,
 				687D1D4529F0C09500A18DBD /* Assets.xcassets */,
 				687D1D4729F0C09500A18DBD /* Preview Content */,
-				683C47A629F2D10700AC93E7 /* DetailViewModel.swift */,
-				683C47A829F2D11A00AC93E7 /* DetailView.swift */,
 			);
 			path = "Ciclo de studos";
 			sourceTree = "<group>";
@@ -257,19 +275,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68BD3F2A29F88AAA00D054C1 /* SubjectsListView.swift in Sources */,
 				683C479B29F2CCDE00AC93E7 /* DummyData.swift in Sources */,
 				683C47A929F2D11A00AC93E7 /* DetailView.swift in Sources */,
 				683C479929F2CCC300AC93E7 /* Shared.swift in Sources */,
 				683C47A029F2D03800AC93E7 /* ReportView.swift in Sources */,
+				68BD3F2829F889DF00D054C1 /* DataBase.swift in Sources */,
+				68BD3F2E29F8A5F100D054C1 /* DailyStudyTimeView.swift in Sources */,
 				C18C87AC29F75A91002D2129 /* DotIndicatorView.swift in Sources */,
 				687D1D4429F0C09300A18DBD /* HomeView.swift in Sources */,
 				683C47AF29F2D3C400AC93E7 /* StudyCicleViewModel.swift in Sources */,
+				68BD3F2429F882B500D054C1 /* SubjectResgistrationView.swift in Sources */,
 				683C479629F2CB8E00AC93E7 /* HomeViewModel.swift in Sources */,
 				687D1D5229F0C13600A18DBD /* Model.swift in Sources */,
-				683C47A329F2D08B00AC93E7 /* InputView.swift in Sources */,
+				683C47A329F2D08B00AC93E7 /* StudyStartDateView.swift in Sources */,
 				683C479E29F2CFDA00AC93E7 /* ReportViewModel.swift in Sources */,
 				687D1D4229F0C09300A18DBD /* Ciclo_de_studosApp.swift in Sources */,
 				683C47AD29F2D3A700AC93E7 /* StudyCicleView.swift in Sources */,
+				68BD3F2629F8848300D054C1 /* NavigationModel.swift in Sources */,
+				68BD3F2C29F8A2B900D054C1 /* IntroView.swift in Sources */,
 				683C47A729F2D10700AC93E7 /* DetailViewModel.swift in Sources */,
 				683C47A529F2D0AF00AC93E7 /* InputViewModel.swift in Sources */,
 			);
