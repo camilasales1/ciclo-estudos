@@ -33,7 +33,13 @@ struct SubjectsListView: View {
         }
       }.listStyle(.sidebar)
       NavigationLink("Adicionar matérias", value:Screen.subjectregistration)
-      
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+          ToolbarItem(placement:.navigationBarTrailing) {
+            NavigationLink("Prosseguir", value: Screen.home).buttonStyle(.bordered)
+          
+        }
+      }
     }
   }
 }

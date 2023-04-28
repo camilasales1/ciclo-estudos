@@ -16,21 +16,15 @@ struct HomeView: View {
              NavigationLink("study Cicle View", value:Screen.studyCicle)
           }
           .tabItem {
-             Image(systemName: "clock.fill")
+             Image(systemName: "clock.arrow.circlepath")
           }
          Text("dois")
           .tabItem {
-            Image(systemName: "clock.fill")
+            Image(systemName: "square.and.pencil.circle.fill")
             Text("dois")
           }
-          VStack{
-             Text("tres")
-             NavigationLink("Home", value:Screen.home)
-          }
-          .tabItem {
-             Image(systemName: "clock.fill")
-          }
-       }
+          
+       }.navigationBarBackButtonHidden(true)
     }
 }
 
