@@ -11,22 +11,20 @@ struct HomeView: View {
     var body: some View {
        
        TabView {
-//          VStack{
+          VStack{
              Text("um")
-//             NavigationLink("study Cicle View", value:Screen.studyCicle)
-//          }
-          .tabItem {
-             Image(systemName: "clock.fill")
-             Text("dois")
+             NavigationLink("study Cicle View", value:Screen.studyCicle)
           }
-//          VStack{
-             Text("tres")
-//             NavigationLink("Home", value:Screen.home)
-//          }
-//          .tabItem {
-//             Image(systemName: "clock.fill")
-//          }
-       }
+          .tabItem {
+             Image(systemName: "clock.arrow.circlepath")
+          }
+         Text("dois")
+          .tabItem {
+            Image(systemName: "square.and.pencil.circle.fill")
+            Text("dois")
+          }
+          
+       }.navigationBarBackButtonHidden(true)
     }
 }
 
