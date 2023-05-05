@@ -24,16 +24,17 @@ struct DotIndicator: View {
             Circle()
                 .scaleEffect(
                     slectedPage == pageIndex
-                    ? maxScale
-                    : minScale
-                )
+                        ? maxScale
+                        : minScale
+            )
                 .animation(.spring())
                 .foregroundColor(
                     slectedPage == pageIndex
-                    ? Color.black
-                    : Color.black.opacity(minOpacity)
-                )
+                        ? Color.black
+                        : Color.black.opacity(minOpacity)
+            )
         }
+        
     }
 }
 
