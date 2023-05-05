@@ -7,7 +7,7 @@
 
 import Foundation
 class NavigationModel: ObservableObject{
-  var path: [Screen] = []
+ @Published var path: [Screen] = []
   
   func pop(){
     path.removeLast()
@@ -17,19 +17,21 @@ class NavigationModel: ObservableObject{
     path = [Screen.home]
   }
 }
-enum Screen{
+enum Screen: Hashable{
   case intro
   case startDate
   case endDate
   case daily
+  case week
   case subjectlist
   case subjectregistration
   case home
   case studyCicle
   case report
   case input
-  case detail(Subject)
+  case empty
+  case load
 }
-extension Screen: Identifiable,Hashable{
+extension Screen: Identifiable{
   var id: Self{ self }
 }

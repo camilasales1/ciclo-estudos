@@ -7,20 +7,23 @@
 
 import Foundation
 
-struct StudyCicle:Identifiable{
-   var id = UUID()
-   let name: String
-   var testDate: Date
-   var studyStartDate: Date
-   var subjects: [Subject]
-   var TotalHours:Date?
+struct StudyCicle:Identifiable, Hashable{
+  var id = UUID()
+  let name: String
+  var testDate: Date
+  var subjects: [Subject]
+  var studyDailyTime: Int
+  var studyWeekTime:[Int]
+  var totalDays:Int
+  var totalHours: Int
 }
 
-struct Subject: Identifiable{
-   var id = UUID()
+struct Subject: Hashable, Identifiable{
+  var id = UUID()
    var name: String
-   var weight: Int
+   var weight: Double
    var dificult: Int
    var totalQuestions: Int
-   var remainingTime:Date?
+   var remainingTime:Double
+   var relevance:Double
 }
