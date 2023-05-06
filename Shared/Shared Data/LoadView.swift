@@ -8,29 +8,31 @@
 import SwiftUI
 
 struct LoadView: View {
-  @EnvironmentObject var navigationModel : NavigationModel
-  var valor:Float = 5
-  var body: some View {
-    VStack {
-      ProgressView(){Text("Calculando as Variáveis do Ciclo de Estudos")}
-        .onAppear(){
-          print(navigationModel.path)
-          DispatchQueue.main.asyncAfter(deadline: .now()+3){
-            navigationModel.path.append(Screen.home)
-            
-            print(navigationModel.path)
-          }
+    @EnvironmentObject var navigationModel : NavigationModel
+    var valor:Float = 5
+    
+    var body: some View {
+        VStack {
+            ProgressView(){Text("Calculando as Variáveis do Ciclo de Estudos")}
+                .onAppear(){
+                    print(navigationModel.path)
+                    DispatchQueue.main.asyncAfter(deadline: .now()+3){
+                        navigationModel.path.append(Screen.home)
+                        
+                        print(navigationModel.path)
+                    }
+                }
+        }
     }
-    }
-  }
 }
+
 struct LoadView_Previews: PreviewProvider {
     static var previews: some View {
-      NavigationStack {
-        LoadView()
-          .environmentObject(DataBase())
-          .environmentObject(NavigationModel())
-        .environmentObject(InputViewModel())
-      }
+        NavigationStack {
+            LoadView()
+                .environmentObject(DataBase())
+                .environmentObject(NavigationModel())
+                .environmentObject(InputViewModel())
+        }
     }
 }

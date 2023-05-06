@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BarChartsView: View {
     var body: some View {
-
+        
         Home()
     }
 }
@@ -29,9 +29,9 @@ struct Home: View {
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false) {
-          
+            
             VStack {
-           
+                
                 // Bar Chart...
                 
                 VStack(alignment: .leading, spacing: 25) {
@@ -91,7 +91,7 @@ struct Home: View {
                         .foregroundColor(.white)
                     
                     Spacer(minLength: 0)
-
+                    
                 }
                 .padding()
                 
@@ -120,7 +120,7 @@ struct Home: View {
                                     .trim(from: 0, to: 1)
                                     .stroke(stat.color.opacity(0.20), lineWidth: 10)
                                     .frame(width: (UIScreen.main.bounds.width - 150) / 2, height: (UIScreen.main.bounds.width - 150) / 2)
-                                    
+                                
                                 Circle()
                                     .trim(from: 0, to: (stat.currentData / stat.goal))
                                     .stroke(stat.color, style: StrokeStyle(lineWidth: 10, lineCap: .round))
@@ -136,7 +136,7 @@ struct Home: View {
                             .rotationEffect(.init(degrees: -90))
                             
                             Text(getDec(val: stat.currentData) + getType(val: stat.title))
-
+                            
                                 .font(.system(size: 22))
                                 .foregroundColor(.white)
                                 .fontWeight(.bold)
@@ -202,7 +202,7 @@ struct Home: View {
         // 24 hrs in min = 1440
         
         let hrs = CGFloat(value / 1440) * 200
-            
+        
         return hrs
     }
     // getting hrs...
@@ -233,17 +233,17 @@ struct Daily: Identifiable {
     var day: String
     var study_In_Mn: CGFloat
 }
-    var workout_Data = [// day seria o subject, study in seria o remaining time
+var workout_Data = [// day seria o subject, study in seria o remaining time
     
-        Daily(id: 0, day: "Day 1", study_In_Mn: 480),
-        Daily(id: 1, day: "Day 2", study_In_Mn: 880),
-        Daily(id: 2, day: "Day 3", study_In_Mn: 250),
-        Daily(id: 3, day: "Day 4", study_In_Mn: 360),
-        Daily(id: 4, day: "Day 5", study_In_Mn: 1220),
-        Daily(id: 5, day: "Day 6", study_In_Mn: 750),
-        Daily(id: 6, day: "Day 7", study_In_Mn: 950)
+    Daily(id: 0, day: "Day 1", study_In_Mn: 480),
+    Daily(id: 1, day: "Day 2", study_In_Mn: 880),
+    Daily(id: 2, day: "Day 3", study_In_Mn: 250),
+    Daily(id: 3, day: "Day 4", study_In_Mn: 360),
+    Daily(id: 4, day: "Day 5", study_In_Mn: 1220),
+    Daily(id: 5, day: "Day 6", study_In_Mn: 750),
+    Daily(id: 6, day: "Day 7", study_In_Mn: 950)
     
-    ]
+]
 
 
 // stats Data...
@@ -254,16 +254,16 @@ struct Stats : Identifiable { // adaptar esses Dados dentro dos dados do Subject
     var currentData: CGFloat
     var goal: CGFloat
     var color: Color
-
+    
 }
 
 var stats_Data = [ //[subjects] title: subjects.name, currentData seria remaningTime goal totalremainingTime, color seria por posição no array.
-
+    
     Stats(id: 0, title: "Portugues", currentData: 6.8, goal: 15, color: Color("Portugues")),
     Stats(id: 1, title: "Matematica", currentData: 3.5, goal: 5, color: Color("Matematica")),
     Stats(id: 2, title: "Quimica", currentData: 6.8, goal: 15, color: Color("Quimica")),
     Stats(id: 3, title: "Fisica", currentData: 58, goal: 100, color: Color("Fisica")),
     Stats(id: 4, title: "Informatica", currentData: 6.8, goal: 10, color: Color("Informatica")),
     Stats(id: 5, title: "Direito ", currentData: 12.5, goal: 25, color: Color("Direito"))
-
+    
 ]
