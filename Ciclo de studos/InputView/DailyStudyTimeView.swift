@@ -7,13 +7,11 @@
 
 import SwiftUI
 
-
 struct DailyStudyTimeView: View {
-    
     @EnvironmentObject var inputViewModel : InputViewModel
     
     var body: some View {
-        VStack{
+        VStack {
             Spacer()
             Text("Selecione o tempo diário para estudos:").font(.title)
                 .padding(-40)
@@ -22,8 +20,9 @@ struct DailyStudyTimeView: View {
                     Text( "\(hours.rawValue)")
                         .tag(hours.rawValue)
                 }
-            }.padding(-20)
-                .pickerStyle(.wheel)
+            }
+            .padding(-20)
+            .pickerStyle(.wheel)
             Spacer()
             NavigationLink(value:Screen.week) {
                 Text("Próximo")

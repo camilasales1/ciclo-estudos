@@ -19,7 +19,6 @@ struct Ciclo_de_studosApp: App {
             //Navigation Stack está na raiz do app, dessa forma não é necessário declará-la novamente dentro das views, todas já estão envoltas pelo navigationStack.
             NavigationStack(path: $navigationModel.path){
                 //path é um array que lista o caminho percorrido pelas stacks a cada nova tela uma stack é adicionada nesse array com seu endereço
-                
                 IntroView()
                 //Essa será a primeira view a ser vista no app.
                     .environmentObject(NavigationModel())

@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-struct StudyCicleViewModel{
+struct StudyCicleViewModel {
+    
     var studyCicle:StudyCicle = DummyData.studyCicle
     //  var totalOfQuestions:Int{
     //
@@ -19,7 +20,7 @@ struct StudyCicleView: View {
     @State var studyCicleViewModel = StudyCicleViewModel()
     var body: some View {
         
-        Group{
+        Group {
             VStack {
                 Text(studyCicleViewModel.studyCicle.name)
                 Text("Dias para prova: \(studyCicleViewModel.studyCicle.testDate.daysToDate)")
@@ -78,9 +79,11 @@ struct StudyCicleView: View {
                             Text("Tempo restante: \(subject.remainingTime) s")
                         }
                     }
-                }.listStyle(.sidebar)
+                }
+                .listStyle(.sidebar)
             }
-        }.onAppear(){
+        }
+        .onAppear(){
             studyCicleViewModel.studyCicle = dataBase.studyCicle
             print(studyCicleViewModel.studyCicle.name)
         }

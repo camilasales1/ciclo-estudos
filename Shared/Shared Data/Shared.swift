@@ -7,17 +7,19 @@
 
 import Foundation
 
-enum Weight: Double, CaseIterable{
+enum Weight: Double, CaseIterable {
     case one = 1.0
     case oneAndHalf = 1.5
     case two = 2.0
 }
-enum Dificulty: Int, Identifiable,CaseIterable{
+
+enum Dificulty: Int, Identifiable, CaseIterable {
     case easy = 1
     case regular = 2
     case hard = 3
     var id: Self{self}
 }
+
 extension Dificulty: CustomStringConvertible {
     var description: String {
         switch self {
@@ -31,7 +33,7 @@ extension Dificulty: CustomStringConvertible {
     }
 }
 
-enum Week: Int,Identifiable,CaseIterable{
+enum Week: Int, Identifiable, CaseIterable{
     var id: Self{self}
     case one = 1
     case two = 2
@@ -42,9 +44,9 @@ enum Week: Int,Identifiable,CaseIterable{
     case seven = 7
 }
 
-extension Week{
-    var value:[Int]{
-        switch self{
+extension Week {
+    var value:[Int] {
+        switch self {
         case .one:
             return [1]
         case .two:
@@ -63,7 +65,7 @@ extension Week{
     }
 }
 
-enum DailyHours: Int,Identifiable,CaseIterable{
+enum DailyHours: Int, Identifiable, CaseIterable {
     case one = 1
     case two = 2
     case three = 3
@@ -83,16 +85,19 @@ enum DailyHours: Int,Identifiable,CaseIterable{
     var id: Self{self}
 }
 
-extension Date{
-    var formattedDateBR: String{
+extension Date {
+    var formattedDateBR: String {
         self.formatted(
             .dateTime
                 .day(.twoDigits)
                 .month(.wide)
-                .year(.defaultDigits))
+                .year(.defaultDigits)
+        )
     }
 }
 
-extension Date{
-    var daysToDate: Int{ Calendar.current.dateComponents([.day], from: Date(), to: self).day!}
+extension Date {
+    var daysToDate: Int {
+        Calendar.current.dateComponents([.day], from: Date(), to: self).day!
+    }
 }

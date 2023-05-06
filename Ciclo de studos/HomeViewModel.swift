@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-class HomeViewModel:ObservableObject{
+class HomeViewModel:ObservableObject {
     
 }

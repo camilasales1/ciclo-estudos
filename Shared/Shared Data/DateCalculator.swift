@@ -21,7 +21,7 @@ class DateCalculatorViewModel:  ObservableObject {
         }
     }
     
-    func weekDays (){
+    func weekDays() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         
@@ -45,7 +45,7 @@ class DateCalculatorViewModel:  ObservableObject {
     }
 }
 
-struct DateCalculator: View{
+struct DateCalculator: View {
     @ObservedObject var dateCalculatorViewModel = DateCalculatorViewModel()
     
     var body: some View {
@@ -58,8 +58,6 @@ struct DateCalculator: View{
             }) {
                 Text("Calcular")
             }
-            
-            
             Text("Faltam \(dateCalculatorViewModel.tempototalDeestudo ?? 0) dias até \(dateCalculatorViewModel.endDate)) contando apenas os dias da semana especificados.")
         }
     }

@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-struct Dias{
-    
+
+struct Dias {
     let dataFinal = Calendar.current.date(from:DateComponents(year:2023, month:11, day:19 ))! // substitua com a data final desejada
     var tempoTotalEstudo = Date()
     var diasPorSemana = 5 // substitua com o número desejado de dias por semana de estudo

@@ -11,12 +11,10 @@ import SwiftUI
 
 
 struct TestDateView: View {
-    
     @EnvironmentObject var inputViewModel : InputViewModel
     
     var body: some View {
-        
-        VStack{
+        VStack {
             VStack {
                 Text("Vamos organizar seus estudos?")
                     .font(.title)

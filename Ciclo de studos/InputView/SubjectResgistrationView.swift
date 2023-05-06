@@ -13,14 +13,15 @@ struct SubjectResgistrationView: View {
     @EnvironmentObject var navigationModel: NavigationModel
     
     var body: some View {
-        Form(){
+        Form() {
             Text("Adicione uma matéria ao ciclo de estudos")
                 .multilineTextAlignment(.center)
                 .font(.title)
             VStack (alignment:.listRowSeparatorLeading){
                 Text("Insira o nome da matéria:")
                 TextField("Nome da Matéria", text: $inputViewModel.subjectName)
-            }.onAppear()
+            }
+            .onAppear()
             VStack (alignment:.listRowSeparatorLeading){
                 Text("Quantas questões dessa matéria terá?")
                 TextField("Insira o número de questões",

@@ -13,15 +13,16 @@ struct LoadView: View {
     
     var body: some View {
         VStack {
-            ProgressView(){Text("Calculando as Variáveis do Ciclo de Estudos")}
-                .onAppear(){
+            ProgressView() {
+                Text("Calculando as Variáveis do Ciclo de Estudos")
+            }
+            .onAppear() {
+                print(navigationModel.path)
+                DispatchQueue.main.asyncAfter(deadline: .now()+3){
+                    navigationModel.path.append(Screen.home)
                     print(navigationModel.path)
-                    DispatchQueue.main.asyncAfter(deadline: .now()+3){
-                        navigationModel.path.append(Screen.home)
-                        
-                        print(navigationModel.path)
-                    }
                 }
+            }
         }
     }
 }

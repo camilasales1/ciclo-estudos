@@ -68,7 +68,6 @@ struct PageIndicator: View {
     }
 }
 
-
 // MARK: - Previews -
 struct DotIndicator_Previews: PreviewProvider {
     static var previews: some View {

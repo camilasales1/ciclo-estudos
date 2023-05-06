@@ -9,7 +9,7 @@ import Foundation
 class NavigationModel: ObservableObject {
     @Published var path: [Screen] = []
     
-    func pop(){
+    func pop() {
         path.removeLast()
     }
     

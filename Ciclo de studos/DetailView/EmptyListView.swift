@@ -18,6 +18,7 @@ struct EmptyListView: View {
             .buttonStyle(.bordered)
     }
 }
+
 struct EmptyListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {

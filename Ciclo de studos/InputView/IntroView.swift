@@ -21,15 +21,15 @@ struct IntroView: View {
                 .multilineTextAlignment(.leading)
                 .padding()
             Spacer()
-            NavigationLink( value: Screen.report){
+            NavigationLink( value: Screen.report) {
                 Text("Próximo")
                     .background(Color.primary)
                     .foregroundColor(Color.white) //change to theme color
-            }.onAppear(){
+            }
+            .onAppear(){
                 print(navigationModel.path)
                 DispatchQueue.main.asyncAfter(deadline: .now()+3){
                     navigationModel.path.append(Screen.empty)
-                    
                     print(navigationModel.path)
                 }
             }

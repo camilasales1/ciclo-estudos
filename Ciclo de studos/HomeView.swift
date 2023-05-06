@@ -28,7 +28,8 @@ struct HomeView: View {
                     Text("dois")
                 }
             
-        }.navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

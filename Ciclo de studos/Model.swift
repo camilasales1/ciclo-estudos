@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StudyCicle:Identifiable, Hashable{
+struct StudyCicle:Identifiable, Hashable {
     var id = UUID()
     let name: String
     var testDate: Date
@@ -18,7 +18,7 @@ struct StudyCicle:Identifiable, Hashable{
     var totalHours: Int
 }
 
-struct Subject: Hashable, Identifiable{
+struct Subject: Hashable, Identifiable {
     var id = UUID()
     var name: String
     var weight: Double

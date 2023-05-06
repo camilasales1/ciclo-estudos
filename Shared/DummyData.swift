@@ -15,25 +15,30 @@ struct DummyData{
                                        studyWeekTime: [1,2,3,4,5],
                                        totalDays: 0,
                                        totalHours: 90)
+    
     static var subjects:[Subject] = [informatica,portugues]
+    
     static var informatica:Subject = Subject(name: "Informática",
                                              weight: Weight.two.rawValue,
                                              dificult: Dificulty.easy.rawValue,
                                              totalQuestions: 20,
                                              remainingTime: 0,
                                              relevance: 0)
+    
     static var portugues:Subject = Subject(name: "Português",
                                            weight: Weight.oneAndHalf.rawValue,
                                            dificult: Dificulty.regular.rawValue,
                                            totalQuestions: 20,
                                            remainingTime: 0,
                                            relevance: 0)
+    
     static var matematica:Subject = Subject(name: "Matemática",
                                             weight: Weight.one.rawValue,
                                             dificult:Dificulty.regular.rawValue,
                                             totalQuestions: 20,
                                             remainingTime: 0,
                                             relevance: 0)
+    
     static var fisica:Subject = Subject(name: "Física",
                                         weight: Weight.one.rawValue,
                                         dificult: Dificulty.easy.rawValue,

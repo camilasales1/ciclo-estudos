@@ -10,6 +10,7 @@ import SwiftUI
 struct SubjectsListView: View {
     @EnvironmentObject var inputViewModel : InputViewModel
     @EnvironmentObject var dataBase: DataBase
+    
     var body: some View {
         VStack {
             Text ("Relação de matérias")
@@ -23,11 +24,10 @@ struct SubjectsListView: View {
             Spacer()
             if inputViewModel.subjects.isEmpty{
                 EmptyListView()
-            }else{
+            } else {
                 List{
-                    ForEach(inputViewModel.subjects, id:\.self){
+                    ForEach(inputViewModel.subjects, id:\.self) {
                         subject in Section(subject.name) {
-                            
                             VStack {
                                 Text("Nivel de dificuldade:")
                                 Text(subject.dificult.description)
@@ -61,7 +61,7 @@ struct SubjectsListView: View {
                 }
             }
             Spacer()
-            NavigationLink(value: Screen.load){
+            NavigationLink(value: Screen.load) {
                 Text("Concluir")
                     .background(Color.primary)
                     .foregroundColor(Color.white)
@@ -71,12 +71,14 @@ struct SubjectsListView: View {
                 print(dataBase.studyCicle)
             }
             PageIndicator(numPages: 6, currentPage: .constant(5))
-        }.onAppear(){
+        }
+        .onAppear(){
             inputViewModel.calculateTotalDays()
             inputViewModel.updateRemainingTime()
         }
     }
 }
+
 struct SubjectsListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
