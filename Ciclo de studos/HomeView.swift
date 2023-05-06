@@ -9,29 +9,33 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-
-        TabView {
-            VStack{
-                Text("um")
-                NavigationLink("study Cicle View", value:Screen.studyCicle)
-            }
-            .tabItem {
-                Image(systemName: "clock.arrow.circlepath")
-            }
+       
+       TabView {
+         VStack {
+           StudyCicleView()
+         }
+         .tabItem {
+           Image(systemName: "clock.arrow.circlepath")
+         }
+         Text("dois")
+          .tabItem {
+            Image(systemName: "square.and.pencil.circle.fill")
             Text("dois")
-                .tabItem {
-                    Image(systemName: "square.and.pencil.circle.fill")
-                    Text("dois")
-                }
-
-        }.navigationBarBackButtonHidden(true)
+          }
+         Home()
+           .tabItem {
+             Image(systemName: "chart.fill")
+             Text("dois")
+           }
+          
+       }.navigationBarBackButtonHidden(true)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            HomeView()
-        }
+       NavigationStack {
+         HomeView().environmentObject(DataBase())
+       }
     }
 }
