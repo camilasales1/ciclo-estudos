@@ -13,17 +13,19 @@ struct SubjectsListView: View {
     
     var body: some View {
         VStack {
-            Text ("Relação de matérias")
+            Spacer()
+            Text("Matérias")
                 .font(.title)
-                .padding(.top,30)
                 .onAppear(){
                     inputViewModel.updateStudyCicle()
                     inputViewModel.updateStudyCicle()
                     print(inputViewModel.studyCicle)
                 }
-            Spacer()
+                .padding()
+            
             if inputViewModel.subjects.isEmpty{
                 EmptyListView()
+                
             } else {
                 List{
                     ForEach(inputViewModel.subjects, id:\.self) {
@@ -63,8 +65,11 @@ struct SubjectsListView: View {
             Spacer()
             NavigationLink(value: Screen.load) {
                 Text("Concluir")
-                    .background(Color.primary)
-                    .foregroundColor(Color.white)
+                    .padding()
+                    .background(Color("Dark blue"))
+                    .foregroundColor(Color("Background"))
+                    .clipShape(Capsule())
+                    .padding()
             }
             .onDisappear() {//atualiza a base de dados.
                 dataBase.studyCicle = inputViewModel.studyCicle
@@ -76,6 +81,7 @@ struct SubjectsListView: View {
             inputViewModel.calculateTotalDays()
             inputViewModel.updateRemainingTime()
         }
+//        .background(Color("Background"))
     }
 }
 

@@ -15,28 +15,30 @@ struct TestDateView: View {
     
     var body: some View {
         VStack {
-            VStack {
-                Text("Vamos organizar seus estudos?")
-                    .font(.title)
-                    .padding()
-                Text("Selecione Data da prova ou a data limite para os estudos.")
-                    .font(.title2)
-                DatePicker(
-                    "", selection: $inputViewModel.testDate, in: Date()...,  displayedComponents: [.date]
-                ).datePickerStyle(.wheel)
-                Text(inputViewModel.testDate.formattedDateBR)
-            }
+            Spacer()
+            Text("Selecione a data da prova:")
+                .font(.title)
+            DatePicker(
+                "", selection: $inputViewModel.testDate, in: Date()...,  displayedComponents: [.date]
+            )
+            .datePickerStyle(.wheel)
+            .padding()
+            
+            //                Text(inputViewModel.testDate.formattedDateBR)
             Spacer()
             VStack {
                 NavigationLink(value:Screen.daily) {
                     Text("Próximo")
-                        .background(Color.primary)
-                        .foregroundColor(Color.white) //change to theme color
+                        .padding()
+                        .background(Color("Dark blue"))
+                        .foregroundColor(Color("Background"))
+                        .clipShape(Capsule())
+                        .padding()
                 }
                 PageIndicator(numPages: 6, currentPage: .constant(2))
             }
         }
-        .padding()
+        .background(Color("Background"))
     }
 }
 

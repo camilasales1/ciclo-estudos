@@ -13,18 +13,23 @@ struct NameView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("Vamos começar dando um nome para Seu novo Ciclo de estudos:")
+            Text("Dê um nome para o ciclo de estudos:")
                 .multilineTextAlignment(.center)
                 .font(.title)
-            TextField("Insira aqui o nome", text: $inputViewModel.name).multilineTextAlignment(.center)
+            TextField("Insira aqui o nome", text: $inputViewModel.name)
+                .multilineTextAlignment(.center)
             Spacer()
             NavigationLink( value: Screen.startDate){
                 Text("Próximo")
-                    .background(Color.primary)
-                    .foregroundColor(Color.white) //change to theme color
+                    .padding()
+                    .background(Color("Dark blue"))
+                    .foregroundColor(Color("Background"))
+                    .clipShape(Capsule())
+                    .padding()
             }
             PageIndicator(numPages: 6, currentPage: .constant(1))
         }
+        .background(Color("Background"))
     }
 }
 

@@ -27,3 +27,5 @@ struct Subject: Hashable, Identifiable {
     var remainingTime:Double
     var relevance:Double
 }
+
+//An image that assists students in time management for entrance exams and competitions. The image should convey the idea of organization, efficiency, and focus on studying. You can use elements such as a stopwatch, a calendar, books, and icons related to different academic subjects to represent the subjects.

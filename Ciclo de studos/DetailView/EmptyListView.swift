@@ -13,9 +13,17 @@ struct EmptyListView: View {
     
     var body: some View {
         Text("Insira uma matéria ao seu Ciclo de Estudos")
-            .font(.title).multilineTextAlignment(.center)
+            .font(.title2)
+            .fontWeight(.light)
+            .multilineTextAlignment(.center)
+        
         NavigationLink("Adicionar matérias", value:Screen.subjectregistration)
             .buttonStyle(.bordered)
+            .padding()
+            .background(Color("Dark blue"))
+            .foregroundColor(.white)
+            .clipShape(Capsule())
+            .padding()
     }
 }
 
