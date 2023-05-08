@@ -12,10 +12,10 @@ struct DetailViewModel{
 struct EmptyListView: View {
     
     var body: some View {
-        Text("Insira uma matéria ao seu Ciclo de Estudos")
-            .font(.title2)
-            .fontWeight(.light)
-            .multilineTextAlignment(.center)
+//        Text("Insira uma matéria ao seu Ciclo de Estudos")
+//            .font(.title2)
+//            .fontWeight(.light)
+//            .multilineTextAlignment(.center)
         
         NavigationLink("Adicionar matérias", value:Screen.subjectregistration)
             .buttonStyle(.bordered)

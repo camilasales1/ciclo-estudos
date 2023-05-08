@@ -30,6 +30,7 @@ struct WeekDays: View {
                     .background(Color("Dark blue"))
                     .foregroundColor(Color("Background"))
                     .clipShape(Capsule())
+                    .shadow(radius: 5)
                     .padding()
             }
             PageIndicator(numPages: 6, currentPage: .constant(4))

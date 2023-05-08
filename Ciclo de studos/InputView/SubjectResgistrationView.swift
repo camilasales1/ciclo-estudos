@@ -13,57 +13,69 @@ struct SubjectResgistrationView: View {
     @EnvironmentObject var navigationModel: NavigationModel
     
     var body: some View {
-        Form() {
-            Text("Adicione uma matéria ao ciclo de estudos")
-                .multilineTextAlignment(.center)
-                .font(.title)
-            VStack (alignment:.listRowSeparatorLeading){
-                Text("Insira o nome da matéria:")
-                TextField("Nome da Matéria", text: $inputViewModel.subjectName)
+        
+        VStack {
+            Form() {
+                Section(header: Text("Nome")){
+                    TextField("Nome da matéria", text: $inputViewModel.subjectName)
+                }
+                .onAppear()
+                
+                Section(header: Text("Número de questões"), footer: Text("Digite o número de questões da matéria.")){
+                    TextField("", value: $inputViewModel.numberOfQuestions,
+                              format: .number)
+                    .keyboardType(.numberPad)
+                }
+                
+                Section(header: Text("Peso"),
+                        footer: Text("Selecione o peso da matéria de acordo com o edital.")) {
+                    Picker(selection: $inputViewModel.weight,
+                           label: Text("Peso da matéria")) {
+                        ForEach (Weight.allCases, id: \.self){ weight in
+                            Text(String(format: "%.2f", weight.rawValue))
+                                .tag(weight.rawValue)
+                        }
+                    }
+                           .pickerStyle(.segmented)
+                }
+                
+                Section(header: Text("Dificuldade"), footer: Text("Selecione o grau de dificuldade da matéria.")) {
+                    Picker(selection: $inputViewModel.dificulty,
+                           label: Text("Dificuldade")) {
+                        ForEach(Dificulty.allCases, id: \.self) { dificuldade in
+                            Text(dificuldade.description).tag(dificuldade.rawValue)
+                        }
+                    }
+                           .pickerStyle(.segmented)
+                           .buttonStyle(.bordered)
+                }
+                
+                //            VStack(alignment:.listRowSeparatorLeading) {
+                //                Text("Relevancia da matéria: "  + String(inputViewModel.subject.relevance))
+                //                    .multilineTextAlignment(.leading)
+                //            }
+                
             }
-            .onAppear()
-            VStack (alignment:.listRowSeparatorLeading){
-                Text("Quantas questões dessa matéria terá?")
-                TextField("Insira o número de questões",
-                          value: $inputViewModel.numberOfQuestions,
-                          format: .number).keyboardType(.numberPad)
-            }
+            .navigationTitle("Adicione uma matéria")
+            .scrollContentBackground(.hidden)
             
-            VStack(alignment:.listRowSeparatorLeading) {
-                Text("Selecione o peso da matéria de acordo com o edital:")
-                    .multilineTextAlignment(.center)
-                Picker( selection: $inputViewModel.weight, label: Text("Peso da matéria")) {
-                    ForEach (Weight.allCases, id: \.self){ weight in
-                        Text(String(format: "%.2f", weight.rawValue))
-                            .tag(weight.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
+            Button("Adicionar"){
+                inputViewModel.addSubject(subject: Subject(name: inputViewModel.subjectName,
+                                                           weight: inputViewModel.weight,
+                                                           dificult: inputViewModel.dificulty,
+                                                           totalQuestions: inputViewModel.numberOfQuestions,
+                                                           remainingTime: inputViewModel.remainingTime,
+                                                           relevance: inputViewModel.relevance))
+                navigationModel.path.removeLast()
             }
-            VStack {
-                Text("Selecione seu grau de Dificuldade com a matéria:")
-                Picker(selection: $inputViewModel.dificulty, label: Text("Dificuldade")) {
-                    ForEach(Dificulty.allCases, id: \.self) { dificuldade in
-                        Text(dificuldade.description).tag(dificuldade.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .buttonStyle(.bordered)
-                .padding()
-                Text("Relevancia da matéria: "  + String(inputViewModel.subject.relevance))
-                    .multilineTextAlignment(.leading)
-                    .padding()
-                Button("Adicionar Matéria"){
-                    inputViewModel.addSubject(subject: Subject(name: inputViewModel.subjectName,
-                                                               weight: inputViewModel.weight,
-                                                               dificult: inputViewModel.dificulty,
-                                                               totalQuestions: inputViewModel.numberOfQuestions,
-                                                               remainingTime: inputViewModel.remainingTime,
-                                                               relevance: inputViewModel.relevance))
-                    navigationModel.path.removeLast()
-                }
-            }
+            .padding()
+            .background(Color("Dark blue"))
+            .foregroundColor(Color("Background"))
+            .clipShape(Capsule())
+            .shadow(radius: 5)
+            .padding()
         }
+        .background(Color("Background"))
     }
 }
 

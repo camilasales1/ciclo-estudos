@@ -13,62 +13,41 @@ struct SubjectsListView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            Text("Matérias")
-                .font(.title)
-                .onAppear(){
-                    inputViewModel.updateStudyCicle()
-                    inputViewModel.updateStudyCicle()
-                    print(inputViewModel.studyCicle)
-                }
-                .padding()
-            
-            if inputViewModel.subjects.isEmpty{
-                EmptyListView()
-                
-            } else {
-                List{
-                    ForEach(inputViewModel.subjects, id:\.self) {
-                        subject in Section(subject.name) {
-                            VStack {
-                                Text("Nivel de dificuldade:")
-                                Text(subject.dificult.description)
-                            }
-                            HStack {
-                                Text("Peso:")
-                                Text(String(format: "%.2f", subject.weight))
-                            }
-                            HStack {
-                                Text("Total de questões previstas:")
-                                Text("\(subject.totalQuestions)")
-                            }
-                            HStack {
-                                Text("Indice de relevância da matéria: ")
-                                Text("\(subject.relevance)")
-                            }
-                            HStack {
-                                Text("tempo restante: ")
-                                
-                                Text("\(subject.remainingTime)")
-                            }
+            VStack {
+                Spacer()
+                if inputViewModel.subjects.isEmpty {
+                    EmptyListView()
+                } else {
+                    VStack {
+                        List(inputViewModel.subjects, id:\.self) { subject in
+                            Text(subject.name)
                         }
+                        .scrollContentBackground(.hidden)
+                        Spacer()
+                        NavigationLink("Adicionar matérias", value:Screen.subjectregistration)
+                            .buttonStyle(.bordered)
+                            .padding()
+                            .background(Color("Dark blue"))
+                            .foregroundColor(.white)
+                            .clipShape(Capsule())
+                            .padding()
                     }
                 }
-                .listStyle(.sidebar)
-                .navigationBarBackButtonHidden(true)
-                .toolbar {
-                    ToolbarItem(placement:.navigationBarTrailing) {
-                        NavigationLink("Adicionar matérias", value:Screen.subjectregistration).buttonStyle(.bordered)
-                    }
-                }
+                Spacer()
             }
-            Spacer()
+//            .navigationTitle("Adicione uma matéria")
+            .onAppear(){
+                inputViewModel.updateStudyCicle()
+                inputViewModel.updateStudyCicle()
+                print(inputViewModel.studyCicle)
+            }
             NavigationLink(value: Screen.load) {
                 Text("Concluir")
                     .padding()
                     .background(Color("Dark blue"))
                     .foregroundColor(Color("Background"))
                     .clipShape(Capsule())
+                    .shadow(radius: 5)
                     .padding()
             }
             .onDisappear() {//atualiza a base de dados.
@@ -77,11 +56,11 @@ struct SubjectsListView: View {
             }
             PageIndicator(numPages: 6, currentPage: .constant(5))
         }
+//        .background(Color("Background"))
         .onAppear(){
             inputViewModel.calculateTotalDays()
             inputViewModel.updateRemainingTime()
         }
-//        .background(Color("Background"))
     }
 }
 
