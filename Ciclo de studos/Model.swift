@@ -16,6 +16,7 @@ struct StudyCicle:Identifiable, Hashable {
     var studyWeekTime:[Int]
     var totalDays:Int
     var totalHours: Int
+    var remainingTotalHours: Double
 }
 
 struct Subject: Hashable, Identifiable {
@@ -24,8 +25,10 @@ struct Subject: Hashable, Identifiable {
     var weight: Double
     var dificult: Int
     var totalQuestions: Int
-    var remainingTime:Double
+    var subjectTotalStudyTime:Double
     var relevance:Double
+    var remainingTime:Double
+    
 }
 
 //An image that assists students in time management for entrance exams and competitions. The image should convey the idea of organization, efficiency, and focus on studying. You can use elements such as a stopwatch, a calendar, books, and icons related to different academic subjects to represent the subjects.

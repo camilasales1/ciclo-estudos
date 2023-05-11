@@ -21,10 +21,24 @@ struct Dias {
     //  mutating func semanasDeEstudo1(){
     //  semanasDeEstudo = Int(tempoTotalEstudo / diasPorSemanaTimeInterval)
 }
-
+class DataView: ObservableObject{
+  let timeInterval: Double = 24*60*60 // valor Double em segundos desde 01/01/1970
+  var dateFormatter = DateFormatter()
+ 
+  var dateString = ""
+  var date1 = Date()
+    init(){
+      dateFormatter.dateFormat = " HH:mm:ss"
+     dateString = dateFormatter.string(from: Date(timeIntervalSince1970: timeInterval))
+      date1 = dateFormatter.date(from: dateString)!
+        // aqui a variável "date" é um Date com as informações de horas corretas
+      
+    }
+}
 struct diasporsemana: View {
+  @ObservedObject var vm = DataView()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      Text(vm.date1.formatted(date: .omitted, time: .complete))
     }
 }
 

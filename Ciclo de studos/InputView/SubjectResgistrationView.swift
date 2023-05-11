@@ -64,8 +64,8 @@ struct SubjectResgistrationView: View {
                                                            weight: inputViewModel.weight,
                                                            dificult: inputViewModel.dificulty,
                                                            totalQuestions: inputViewModel.numberOfQuestions,
-                                                           remainingTime: inputViewModel.remainingTime,
-                                                           relevance: inputViewModel.relevance))
+                                                           subjectTotalStudyTime: inputViewModel.subjectTotalStudyTime,
+                                                           relevance: inputViewModel.relevance, remainingTime: inputViewModel.remainingTime))
                 navigationModel.path.removeLast()
             }
             .padding()

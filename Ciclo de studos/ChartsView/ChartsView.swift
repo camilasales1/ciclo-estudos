@@ -7,20 +7,21 @@
 
 import SwiftUI
 
-struct BarChartsView: View {
+struct ChartsView: View {
     var body: some View {
         
-        Home()
+        Charts()
     }
 }
 
-struct BarChartsView_Previews: PreviewProvider {
+struct ChartsView_Previews: PreviewProvider {
     static var previews: some View {
-        BarChartsView()
+        ChartsView()
+        .preferredColorScheme(.dark)
     }
 }
 
-struct Home: View {
+struct Charts: View {
     
     @State var selected = 0
     var colors = [Color("Color1"),Color("Color2")]//gradient
@@ -40,44 +41,44 @@ struct Home: View {
                         .font(.system(size: 22))
                         .fontWeight(.bold)
                         .foregroundColor(.green)
-                    
-                    HStack(spacing: 15) {
-                        ForEach(workout_Data) {work in
-                            
-                            // Bars...
-                            
-                            VStack {
-                                
-                                VStack {
-                                    
-                                    Spacer(minLength: 0)
-                                    
-                                    if selected == work.id {
-                                        Text(getHrs(value: work.study_In_Mn))
-                                            .foregroundColor(Color("Color1"))
-                                            .padding(.bottom,5)
-                                    }
-                                    
-                                    RoundeShape()
-                                        .fill(LinearGradient(gradient: .init(colors: selected == work.id ? colors : [Color.white.opacity(0.06)]), startPoint: .top, endPoint: .bottom))
-                                    // max height = 200
-                                        .frame(height: getHeight(value: work.study_In_Mn))
-                                }
-                                .frame(height: 220)
-                                .onTapGesture {
-                                    
-                                    withAnimation(.easeOut) {
-                                        
-                                        selected = work.id
-                                    }
-                                }
-                                
-                                Text(work.day)
-                                    .font(.caption)
-                                    .foregroundColor(.white)
-                            }
-                        }
-                    }
+                  ProgressRing( totalTime: 20, remainingTime: 20)
+//                    HStack(spacing: 15) {
+//                        ForEach(workout_Data) {work in
+//
+//                            // Bars...
+//
+//                            VStack {
+//
+//                                VStack {
+//
+//                                    Spacer(minLength: 0)
+//
+//                                    if selected == work.id {
+//                                        Text(getHrs(value: work.study_In_Mn))
+//                                            .foregroundColor(Color("Color1"))
+//                                            .padding(.bottom,5)
+//                                    }
+//
+//                                    RoundeShape()
+//                                        .fill(LinearGradient(gradient: .init(colors: selected == work.id ? colors : [Color.white.opacity(0.06)]), startPoint: .top, endPoint: .bottom))
+//                                    // max height = 200
+//                                        .frame(height: getHeight(value: work.study_In_Mn))
+//                                }
+//                                .frame(height: 220)
+//                                .onTapGesture {
+//
+//                                    withAnimation(.easeOut) {
+//
+//                                        selected = work.id
+//                                    }
+//                                }
+//
+//                                Text(work.day)
+//                                    .font(.caption)
+//                                    .foregroundColor(.white)
+//                            }
+//                        }
+//                    }
                 }
                 .padding()
                 .background(Color.white.opacity(0.06))
@@ -150,11 +151,8 @@ struct Home: View {
                 .padding()
             }
         }
-        .background(Color.black.edgesIgnoringSafeArea(.all))
-        //  fundo escuro
-        .preferredColorScheme(.dark)
-        // status bar color is not changing
-        // its still in beta...
+       
+       
     }
     
     // calculating Type...
@@ -267,3 +265,6 @@ var stats_Data = [ //[subjects] title: subjects.name, currentData seria remaning
     Stats(id: 5, title: "Direito ", currentData: 12.5, goal: 25, color: Color("Direito"))
     
 ]
+
+// [0,1,2,3,4,5,6,7,8,9,10]
+

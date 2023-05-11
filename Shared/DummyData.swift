@@ -14,36 +14,36 @@ struct DummyData{
                                        studyDailyTime: 3,
                                        studyWeekTime: [1,2,3,4,5],
                                        totalDays: 0,
-                                       totalHours: 90)
+                                       totalHours: 90, remainingTotalHours: 90)
     
-    static var subjects:[Subject] = [informatica,portugues]
+    static var subjects:[Subject] = [informatica,portugues,fisica]
     
     static var informatica:Subject = Subject(name: "Informática",
                                              weight: Weight.two.rawValue,
                                              dificult: Dificulty.easy.rawValue,
                                              totalQuestions: 20,
-                                             remainingTime: 0,
-                                             relevance: 0)
+                                             subjectTotalStudyTime: 45.6,
+                                             relevance: 0, remainingTime: 40)
     
     static var portugues:Subject = Subject(name: "Português",
                                            weight: Weight.oneAndHalf.rawValue,
                                            dificult: Dificulty.regular.rawValue,
                                            totalQuestions: 20,
-                                           remainingTime: 0,
-                                           relevance: 0)
+                                           subjectTotalStudyTime: 7.82,
+                                           relevance: 0, remainingTime: 5.2)
     
     static var matematica:Subject = Subject(name: "Matemática",
                                             weight: Weight.one.rawValue,
                                             dificult:Dificulty.regular.rawValue,
                                             totalQuestions: 20,
-                                            remainingTime: 0,
-                                            relevance: 0)
+                                            subjectTotalStudyTime: 3.5,
+                                            relevance: 0, remainingTime: 3.1)
     
     static var fisica:Subject = Subject(name: "Física",
                                         weight: Weight.one.rawValue,
                                         dificult: Dificulty.easy.rawValue,
                                         totalQuestions: 20,
-                                        remainingTime: 0,
-                                        relevance: 0)
+                                        subjectTotalStudyTime: 10.72,
+                                        relevance: 0, remainingTime: 9.9)
     
 }

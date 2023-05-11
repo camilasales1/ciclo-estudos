@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 class DateCalculatorViewModel:  ObservableObject {
     @Published  var startDate = Date()
     @Published  var endDate = Calendar.current.date(from:DateComponents(year:2023, month:11, day:19 ))!
@@ -19,6 +20,9 @@ class DateCalculatorViewModel:  ObservableObject {
         if let days = components.day {
             difference = days
         }
+      
+
+
     }
     
     func weekDays() {
@@ -59,6 +63,8 @@ struct DateCalculator: View {
                 Text("Calcular")
             }
             Text("Faltam \(dateCalculatorViewModel.tempototalDeestudo ?? 0) dias até \(dateCalculatorViewModel.endDate)) contando apenas os dias da semana especificados.")
+          Spacer()
+         
         }
     }
 }

@@ -22,7 +22,7 @@ struct HomeView: View {
                     Image(systemName: "square.and.pencil.circle.fill")
                     Text("dois")
                 }
-            Home()
+            ChartsView()
                 .tabItem {
                     Image(systemName: "chart.fill")
                     Text("dois")
