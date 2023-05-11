@@ -17,18 +17,15 @@ struct HomeView: View {
             .tabItem {
                 Image(systemName: "clock.arrow.circlepath")
             }
-            Text("dois")
-                .tabItem {
-                    Image(systemName: "square.and.pencil.circle.fill")
-                    Text("dois")
-                }
-            ChartsView()
-                .tabItem {
-                    Image(systemName: "chart.fill")
-                    Text("dois")
-                }
+            .tint(Color("beige"))
             
+          ResetView()
+            .tabItem {
+              Image(systemName:"note.text")
+              Text("Novo Ciclo")
+            }
         }
+        .tint(Color("beige"))
         .navigationBarBackButtonHidden(true)
     }
 }
@@ -36,7 +33,9 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            HomeView().environmentObject(DataBase())
+            HomeView()
+            .environmentObject(DataBase())
+            .environmentObject(NavigationModel())
         }
     }
 }

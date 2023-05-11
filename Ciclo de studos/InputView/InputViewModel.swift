@@ -29,7 +29,7 @@ class InputViewModel:ObservableObject {
     
     //MARK: Variáveis referente ao ciclo
     @Published var name: String = ""
-    @Published var testDate: Date = Calendar.current.date(from: DateComponents( year: 2023, month: 9, day: 23))!
+    @Published var testDate: Date = Calendar.current.date(from: DateComponents( year: 2023, month: 6, day: 23))!
     @Published var studyStartDate: Date = Date()
     @Published var studyDailyTime: Int = 3
     @Published var studyWeekTime: [Int] = [1,2,3,4,5,6,7]
@@ -80,6 +80,7 @@ class InputViewModel:ObservableObject {
         for i in 0..<subjects.count {
             let percentualRelevance = subjects[i].relevance/totalRelevance
             subjects[i].subjectTotalStudyTime = percentualRelevance * Double(totalHours)
+            subjects[i].remainingTime = percentualRelevance * Double(totalHours)
         }
     }
     
@@ -101,4 +102,18 @@ class InputViewModel:ObservableObject {
                                  totalHours: totalHours,
                                  remainingTotalHours: remainingTotalHours)
     }
+  func clear(){
+    subjectName = ""
+    numberOfQuestions = 0
+    dificulty = 1
+    weight = 1.0
+    subjectTotalStudyTime = 0.0
+    remainingTime = 0.0
+    name = ""
+    testDate = Calendar.current.date(from: DateComponents( year: 2023, month: 6, day: 23))!
+    studyStartDate  = Date()
+    studyDailyTime = 3
+    studyWeekTime = [1,2,3,4,5,6,7]
+    totalDays = 0
+  }
 }

@@ -49,12 +49,6 @@ struct SubjectResgistrationView: View {
                            .pickerStyle(.segmented)
                            .buttonStyle(.bordered)
                 }
-                
-                //            VStack(alignment:.listRowSeparatorLeading) {
-                //                Text("Relevancia da matéria: "  + String(inputViewModel.subject.relevance))
-                //                    .multilineTextAlignment(.leading)
-                //            }
-                
             }
             .navigationTitle("Adicione uma matéria")
             .scrollContentBackground(.hidden)
@@ -65,17 +59,18 @@ struct SubjectResgistrationView: View {
                                                            dificult: inputViewModel.dificulty,
                                                            totalQuestions: inputViewModel.numberOfQuestions,
                                                            subjectTotalStudyTime: inputViewModel.subjectTotalStudyTime,
-                                                           relevance: inputViewModel.relevance, remainingTime: inputViewModel.remainingTime))
+                                                           relevance: inputViewModel.relevance, remainingTime: inputViewModel.subjectTotalStudyTime))
                 navigationModel.path.removeLast()
+                inputViewModel.clear()
             }
             .padding()
-            .background(Color("Dark blue"))
-            .foregroundColor(Color("Background"))
+            .background(Color("blue 1"))
+            .foregroundColor(Color("blue 4"))
             .clipShape(Capsule())
-            .shadow(radius: 5)
             .padding()
         }
-        .background(Color("Background"))
+        .foregroundColor(Color("beige"))
+        .background(Color("blue 4"))
     }
 }
 
@@ -85,6 +80,7 @@ struct SubjectRegistrationView_Previews: PreviewProvider {
             SubjectResgistrationView()
                 .environmentObject(InputViewModel())
                 .environmentObject(NavigationModel())
+                .environmentObject(DataBase())
         }
     }
 }

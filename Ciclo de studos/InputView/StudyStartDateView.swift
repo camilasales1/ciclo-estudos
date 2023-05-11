@@ -21,6 +21,7 @@ struct TestDateView: View {
             DatePicker(
                 "", selection: $inputViewModel.testDate, in: Date()...,  displayedComponents: [.date]
             )
+            .colorInvert()
             .datePickerStyle(.wheel)
             .padding()
             
@@ -30,16 +31,16 @@ struct TestDateView: View {
                 NavigationLink(value:Screen.daily) {
                     Text("Próximo")
                         .padding()
-                        .background(Color("Dark blue"))
-                        .foregroundColor(Color("Background"))
+                        .background(Color("blue 1"))
+                        .foregroundColor(Color("blue 4"))
                         .clipShape(Capsule())
-                        .shadow(radius: 5)
                         .padding()
                 }
                 PageIndicator(numPages: 6, currentPage: .constant(2))
             }
         }
-        .background(Color("Background"))
+        .foregroundColor(Color("beige"))
+        .background(Color("blue 4"))
     }
 }
 

@@ -16,21 +16,23 @@ struct NameView: View {
             Text("Dê um nome para o ciclo de estudos:")
                 .multilineTextAlignment(.center)
                 .font(.title)
+                .foregroundColor(Color("beige"))
             TextField("Insira aqui o nome", text: $inputViewModel.name)
                 .multilineTextAlignment(.center)
+                .textFieldStyle(RoundedBorderTextFieldStyle.init())
+                .padding()
             Spacer()
             NavigationLink( value: Screen.startDate){
                 Text("Próximo")
                     .padding()
-                    .background(Color("Dark blue"))
-                    .foregroundColor(Color("Background"))
+                    .background(Color("blue 1"))
+                    .foregroundColor(Color("blue 4"))
                     .clipShape(Capsule())
-                    .shadow(radius: 5)
                     .padding()
             }
             PageIndicator(numPages: 6, currentPage: .constant(1))
         }
-        .background(Color("Background"))
+        .background(Color("blue 4"))
     }
 }
 

@@ -33,11 +33,14 @@
 		68BD3F2E29F8A5F100D054C1 /* DailyStudyTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD3F2D29F8A5F100D054C1 /* DailyStudyTimeView.swift */; };
 		68C552C72A0C5C150077147B /* ProgressRingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C552C62A0C5C150077147B /* ProgressRingViewModel.swift */; };
 		68C552C92A0C5C570077147B /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C552C82A0C5C570077147B /* Ring.swift */; };
-		68C552CB2A0C5C9D0077147B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C552CA2A0C5C9D0077147B /* TimerView.swift */; };
+		68C552CE2A0C7B1B0077147B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C552CD2A0C7B1B0077147B /* DetailView.swift */; };
+		68C552D02A0CDAA30077147B /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C552CF2A0CDAA30077147B /* ResetView.swift */; };
 		68F94D802A02DF9B005D31C7 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F94D7F2A02DF9B005D31C7 /* LoadView.swift */; };
 		68FC6D912A006108003F9939 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC6D902A006108003F9939 /* DateCalculator.swift */; };
 		68FC6D932A00903C003F9939 /* diasporsemana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC6D922A00903C003F9939 /* diasporsemana.swift */; };
 		68FC6D952A009467003F9939 /* WeekDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC6D942A009467003F9939 /* WeekDays.swift */; };
+		C11C22EF2A0D450500C3EE43 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C11C22EE2A0D450500C3EE43 /* Montserrat-Regular.otf */; };
+		C11C22F12A0D453E00C3EE43 /* MontserratAlt1-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C11C22F02A0D453E00C3EE43 /* MontserratAlt1-Regular.otf */; };
 		C18C87AC29F75A91002D2129 /* DotIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18C87AB29F75A91002D2129 /* DotIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,11 +72,15 @@
 		68BD3F2D29F8A5F100D054C1 /* DailyStudyTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStudyTimeView.swift; sourceTree = "<group>"; };
 		68C552C62A0C5C150077147B /* ProgressRingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingViewModel.swift; sourceTree = "<group>"; };
 		68C552C82A0C5C570077147B /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
-		68C552CA2A0C5C9D0077147B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		68C552CD2A0C7B1B0077147B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		68C552CF2A0CDAA30077147B /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
 		68F94D7F2A02DF9B005D31C7 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		68FC6D902A006108003F9939 /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
 		68FC6D922A00903C003F9939 /* diasporsemana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diasporsemana.swift; sourceTree = "<group>"; };
 		68FC6D942A009467003F9939 /* WeekDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDays.swift; sourceTree = "<group>"; };
+		C11C22ED2A0D441900C3EE43 /* Ciclo-de-studos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ciclo-de-studos-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C11C22EE2A0D450500C3EE43 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		C11C22F02A0D453E00C3EE43 /* MontserratAlt1-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlt1-Regular.otf"; sourceTree = "<group>"; };
 		C18C87AB29F75A91002D2129 /* DotIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +106,7 @@
 		683C479429F2CB4F00AC93E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				68B9AD122A0422A700622BD7 /* ChartsView.swift */,
 				687D1D4329F0C09300A18DBD /* HomeView.swift */,
 			);
 			name = View;
@@ -107,8 +115,9 @@
 		683C479729F2CC9600AC93E7 /* Shared Data */ = {
 			isa = PBXGroup;
 			children = (
+				C11C22EE2A0D450500C3EE43 /* Montserrat-Regular.otf */,
+				C11C22F02A0D453E00C3EE43 /* MontserratAlt1-Regular.otf */,
 				683C479829F2CCC300AC93E7 /* Shared.swift */,
-				68F94D7F2A02DF9B005D31C7 /* LoadView.swift */,
 				68BD3F2529F8848300D054C1 /* NavigationModel.swift */,
 				68BD3F2729F889DF00D054C1 /* DataBase.swift */,
 				68FC6D902A006108003F9939 /* DateCalculator.swift */,
@@ -146,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				683C47A629F2D10700AC93E7 /* DetailViewModel.swift */,
-				683C47A829F2D11A00AC93E7 /* EmptyListView.swift */,
+				68C552CD2A0C7B1B0077147B /* DetailView.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -191,13 +200,17 @@
 		687D1D4029F0C09300A18DBD /* Ciclo de studos */ = {
 			isa = PBXGroup;
 			children = (
+				C11C22ED2A0D441900C3EE43 /* Ciclo-de-studos-Info.plist */,
+				68F94D7F2A02DF9B005D31C7 /* LoadView.swift */,
+				68C552CC2A0C7ACA0077147B /* EmptyView */,
 				683C47AB29F2D38500AC93E7 /* StudyCicleView */,
+				683C47AA29F2D14600AC93E7 /* DetailView */,
 				687D1D4F29F0C10E00A18DBD /* HomeView */,
 				68C5528E2A0AF9B90077147B /* ChartsView */,
 				687D1D4729F0C09500A18DBD /* Preview Content */,
-				683C47AA29F2D14600AC93E7 /* DetailView */,
 				683C47A129F2D04300AC93E7 /* InputView */,
 				683C479C29F2CFB400AC93E7 /* ReportView */,
+				68C552CF2A0CDAA30077147B /* ResetView.swift */,
 			);
 			path = "Ciclo de studos";
 			sourceTree = "<group>";
@@ -232,7 +245,6 @@
 		68C5528E2A0AF9B90077147B /* ChartsView */ = {
 			isa = PBXGroup;
 			children = (
-				68B9AD122A0422A700622BD7 /* ChartsView.swift */,
 			);
 			path = ChartsView;
 			sourceTree = "<group>";
@@ -243,9 +255,16 @@
 				6860A9642A09BBD700D5FC78 /* ProgressRing.swift */,
 				68C552C62A0C5C150077147B /* ProgressRingViewModel.swift */,
 				68C552C82A0C5C570077147B /* Ring.swift */,
-				68C552CA2A0C5C9D0077147B /* TimerView.swift */,
 			);
 			name = "Progress Ring";
+			sourceTree = "<group>";
+		};
+		68C552CC2A0C7ACA0077147B /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				683C47A829F2D11A00AC93E7 /* EmptyListView.swift */,
+			);
+			path = EmptyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				687D1D4929F0C09500A18DBD /* Preview Assets.xcassets in Resources */,
+				C11C22F12A0D453E00C3EE43 /* MontserratAlt1-Regular.otf in Resources */,
 				687D1D4629F0C09500A18DBD /* Assets.xcassets in Resources */,
+				C11C22EF2A0D450500C3EE43 /* Montserrat-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,12 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68C552CB2A0C5C9D0077147B /* TimerView.swift in Sources */,
 				68F94D802A02DF9B005D31C7 /* LoadView.swift in Sources */,
 				68BD3F2A29F88AAA00D054C1 /* SubjectsListView.swift in Sources */,
 				68FC6D912A006108003F9939 /* DateCalculator.swift in Sources */,
 				683C479B29F2CCDE00AC93E7 /* DummyData.swift in Sources */,
 				683C47A929F2D11A00AC93E7 /* EmptyListView.swift in Sources */,
+				68C552D02A0CDAA30077147B /* ResetView.swift in Sources */,
 				6860A9652A09BBD700D5FC78 /* ProgressRing.swift in Sources */,
 				683C479929F2CCC300AC93E7 /* Shared.swift in Sources */,
 				68FC6D932A00903C003F9939 /* diasporsemana.swift in Sources */,
@@ -334,6 +355,7 @@
 				C18C87AC29F75A91002D2129 /* DotIndicatorView.swift in Sources */,
 				687D1D4429F0C09300A18DBD /* HomeView.swift in Sources */,
 				683C47AF29F2D3C400AC93E7 /* StudyCicleViewModel.swift in Sources */,
+				68C552CE2A0C7B1B0077147B /* DetailView.swift in Sources */,
 				68C552C72A0C5C150077147B /* ProgressRingViewModel.swift in Sources */,
 				68BD3F2429F882B500D054C1 /* SubjectResgistrationView.swift in Sources */,
 				683C479629F2CB8E00AC93E7 /* HomeViewModel.swift in Sources */,
@@ -479,6 +501,7 @@
 				DEVELOPMENT_TEAM = MM8J553WV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ciclo-de-studos-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -509,6 +532,7 @@
 				DEVELOPMENT_TEAM = MM8J553WV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ciclo-de-studos-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

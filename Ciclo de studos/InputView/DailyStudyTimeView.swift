@@ -15,6 +15,7 @@ struct DailyStudyTimeView: View {
             Spacer()
             Text("Selecione o tempo diário de estudos:")
                 .font(.title)
+                .foregroundColor(Color("beige"))
             
             Picker(selection: $inputViewModel.studyDailyTime, label: Text("Peso da matéria")) {
                 ForEach (DailyHours.allCases){ hours in
@@ -23,19 +24,20 @@ struct DailyStudyTimeView: View {
                 }
             }
             .pickerStyle(.wheel)
+            .colorInvert()
+            
             Spacer()
             NavigationLink(value:Screen.week) {
                 Text("Próximo")
                     .padding()
-                    .background(Color("Dark blue"))
-                    .foregroundColor(Color("Background"))
+                    .background(Color("blue 1"))
+                    .foregroundColor(Color("blue 4"))
                     .clipShape(Capsule())
-                    .shadow(radius: 5)
                     .padding()
             }
             PageIndicator(numPages: 6, currentPage: .constant(3))
         }
-        .background(Color("Background"))
+        .background(Color("blue 4"))
     }
 }
 

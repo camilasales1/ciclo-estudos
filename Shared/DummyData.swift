@@ -44,6 +44,6 @@ struct DummyData{
                                         dificult: Dificulty.easy.rawValue,
                                         totalQuestions: 20,
                                         subjectTotalStudyTime: 10.72,
-                                        relevance: 0, remainingTime: 9.9)
+                                        relevance: 0, remainingTime: 10.72)
     
 }

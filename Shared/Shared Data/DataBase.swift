@@ -15,5 +15,5 @@ class DataBase:ObservableObject {
 //               studyDailyTime: 0,
 //               studyWeekTime: [1],
 //               totalDays: 0,
-//               totalHours: 0)
+//               totalHours: 0, remainingTotalHours: 0)
 }

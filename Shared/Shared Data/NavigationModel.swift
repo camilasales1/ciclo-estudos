@@ -28,10 +28,12 @@ enum Screen: Hashable{
     case subjectregistration
     case home
     case studyCicle
-    case report
+    case detail(Subject)
+    case name
     case input
     case empty
     case load
+    case reset
 }
 
 extension Screen: Identifiable{

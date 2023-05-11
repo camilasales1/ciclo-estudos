@@ -12,17 +12,12 @@ struct DetailViewModel{
 struct EmptyListView: View {
     
     var body: some View {
-//        Text("Insira uma matéria ao seu Ciclo de Estudos")
-//            .font(.title2)
-//            .fontWeight(.light)
-//            .multilineTextAlignment(.center)
-        
         NavigationLink("Adicionar matérias", value:Screen.subjectregistration)
             .buttonStyle(.bordered)
+            .background(Color("blue 1"))
+            .foregroundColor(Color("blue 4"))
             .padding()
-            .background(Color("Dark blue"))
-            .foregroundColor(.white)
-            .clipShape(Capsule())
+            .buttonStyle(.borderedProminent)
             .padding()
     }
 }

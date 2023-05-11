@@ -15,6 +15,7 @@ struct WeekDays: View {
             Spacer()
             Text("Selecione quantos dias da semana pretende estudar:")
                 .font(.title)
+                .foregroundColor(Color("beige"))
                 .multilineTextAlignment(.center)
             Picker(selection: $inputViewModel.studyWeekTime, label: Text("Peso da matéria")) {
                 ForEach (Week.allCases){ days in
@@ -23,19 +24,20 @@ struct WeekDays: View {
                 }
             }
             .pickerStyle(.wheel)
+            .colorInvert()
+            
             Spacer()
             NavigationLink(value:Screen.subjectlist) {
                 Text("Próximo")
                     .padding()
-                    .background(Color("Dark blue"))
-                    .foregroundColor(Color("Background"))
+                    .background(Color("blue 1"))
+                    .foregroundColor(Color("blue 4"))
                     .clipShape(Capsule())
-                    .shadow(radius: 5)
                     .padding()
             }
             PageIndicator(numPages: 6, currentPage: .constant(4))
         }
-        .background(Color("Background"))
+        .background(Color("blue 4"))
     }
 }
 

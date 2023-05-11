@@ -12,10 +12,15 @@ struct LoadView: View {
     var valor:Float = 5
     
     var body: some View {
-        VStack {
+        ZStack {
+            Rectangle()
+                .ignoresSafeArea()
+                .foregroundColor(Color("blue 4"))
+            
             ProgressView() {
                 Text("Calculando as Variáveis do Ciclo de Estudos")
             }
+            .colorInvert()
             .onAppear() {
                 print(navigationModel.path)
                 DispatchQueue.main.asyncAfter(deadline: .now()+3){

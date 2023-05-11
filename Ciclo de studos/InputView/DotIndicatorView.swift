@@ -29,8 +29,8 @@ struct DotIndicator: View {
                 .animation(.spring())
                 .foregroundColor(
                     slectedPage == pageIndex
-                    ? Color.black
-                    : Color.black.opacity(minOpacity)
+                    ? Color("beige")
+                    : Color.white.opacity(minOpacity)
                 )
         }
     }

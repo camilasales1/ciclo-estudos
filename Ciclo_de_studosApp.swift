@@ -38,15 +38,15 @@ struct Ciclo_de_studosApp: App {
                                 .environmentObject(dataBase)
                         case .studyCicle:
                             StudyCicleView()
+                                .environmentObject(dataBase)
                                 .environmentObject(inputViewModel)
                                 .environmentObject(navigationModel)
-                                .environmentObject(dataBase)
                         case .empty:
                             EmptyListView()
                                 .environmentObject(inputViewModel)
                                 .environmentObject(navigationModel)
                                 .environmentObject(dataBase)
-                        case .report:
+                        case .name:
                             NameView()
                                 .environmentObject(inputViewModel)
                                 .environmentObject(navigationModel)
@@ -91,6 +91,13 @@ struct Ciclo_de_studosApp: App {
                                 .environmentObject(inputViewModel)
                                 .environmentObject(navigationModel)
                                 .environmentObject(dataBase)
+                          case .detail(let subject):
+                            DetailView(subject: subject)
+                              .environmentObject(DataBase())
+                          case .reset:
+                            ResetView()
+                              .environmentObject(navigationModel)
+                            
                         }
                     }
             }
